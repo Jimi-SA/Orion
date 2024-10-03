@@ -7,38 +7,44 @@ const features = [
     {
       title: "Cutting-Edge Technology",
       description: "We utilize the latest technologies and tools to provide innovative solutions that keep you ahead of the curve.",
-      image: '',
+      image: 'CuttingEdge.jpg',
     },
     {
       title: "Seamless User Experience",
       description: "Our products are designed with the end-user in mind, ensuring an intuitive and seamless experience across all platforms.",
-      image: '',
+      image: '/UI.jpg',
     },
     {
       title: "24/7 Customer Support",
       description: "We provide round-the-clock support to ensure that your business never misses a beat, no matter the time or place.",
-      image: '',
+      image: '/Customer_care.png',
     },
   ];
 
 const testimonials = [
     {
-        name: "John Doe",
+        name: "Jose Alejandro",
         role: "CEO, Example Corp",
         feedback: "Working with this team has been an absolute pleasure. They delivered above and beyond my expectations.",
-        image: "/john-doe.jpg", // You can replace it with a real image or avatar from a URL.
+        image: "/client3.jpg", // You can replace it with a real image or avatar from a URL.
     },
     {
-        name: "Jane Smith",
+        name: "Mary Shallet",
         role: "CTO, Tech Innovators",
         feedback: "The level of professionalism and expertise provided is top-notch. Our project was completed ahead of schedule!",
-        image: "/jane-smith.jpg",
+        image: "/client1.png",
     },
     {
-        name: "Robert Brown",
+        name: "Adrián Meza",
         role: "Marketing Head, Creative Solutions",
         feedback: "Their creative approach to problem-solving has helped our company achieve outstanding results.",
-        image: "/robert-brown.jpg",
+        image: "/client2.jpg",
+    },
+    {
+        name: "Mily Gavidia Villacres",
+        role: "Marketing Head, Creative Solutions",
+        feedback: "Their creative approach to problem-solving has helped our company achieve outstanding results.",
+        image: "/client4.jpg",
     },
 ];
 
@@ -63,6 +69,7 @@ const Home = () => {
             description: "At Orion, we drive innovation and deliver excellence in every project. Join us in transforming ideas into reality.",
             image: "/bg1.png",
             details: "Our vision is to create impactful solutions that resonate with our clients' goals.",
+            path:"/about"
         },
         {
             title: "Discover Our Services",
@@ -70,20 +77,23 @@ const Home = () => {
             description: "Explore our wide range of services designed to meet your unique needs and propel your business forward.",
             image: "/bg2.jpg",
             details: "From design to launch, we provide comprehensive support at every stage.",
+            path:"/Services"
         },
         {
             title: "Join Our Community",
             subtitle: "Be part of something great.",
             description: "Connect with like-minded individuals and be part of a thriving community focused on growth and success.",
-            image: "https://via.placeholder.com/1920x800/6a5acd",
+            image: "/team.jpg",
             details: "Engage with experts and enthusiasts who share your passion.",
+            path:"/about"
         },
         {
             title: "Your Success is Our Goal",
             subtitle: "Committed to your growth.",
             description: "Our dedicated team is here to ensure your projects succeed and your vision becomes reality.",
-            image: "https://via.placeholder.com/1920x800/ff7f50",
+            image: "/Goal.jpg",
             details: "With a focus on results, we aim to exceed your expectations.",
+            path:"/about"
         },
     ];
 
@@ -123,7 +133,7 @@ const Home = () => {
     ];
 
     useEffect(() => {
-        const intervalId = setInterval(nextSlide, 20000); // Auto slide every 5 seconds
+        const intervalId = setInterval(nextSlide, 10000); // Auto slide every 5 seconds
         return () => clearInterval(intervalId); // Cleanup on unmount
     }, []);
 
@@ -190,7 +200,8 @@ const Home = () => {
                     >
                         {slides[currentIndex].details}
                     </motion.p>
-                    <motion.button
+                   <a href={slides[currentIndex].path}>
+                   <motion.button
                         className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-400 transition duration-300"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -199,12 +210,13 @@ const Home = () => {
                     >
                         Learn More
                     </motion.button>
+                    </a>
                 </div>
 
                 {/* Stylish Breakdown List on the Right */}
                 <div className="relative z-10 flex md:flex-col text-xl bg-white/5 pl-5 justify-start md:w-[50%] items-end h-full py-12">
                     <div className="flex flex-col w-full items-start space-y-8">
-                        {['Vision', 'Design', 'Develop', 'Launch'].map((item, index) => (
+                        {['Vision', 'Design', 'Community', 'Our Goal'].map((item, index) => (
                             <div
                                 key={index}
                                 className="flex items-center w-full border-b space-x-3 cursor-pointer"
@@ -232,7 +244,7 @@ const Home = () => {
 
                 {/* Navigation Buttons */}
                 <div className="absolute bottom-4 left-[35%] transform -translate-x-1/2 flex space-x-4 z-10">
-                    <button
+                    {/*<button
                         onClick={prevSlide}
                         className="bg-gray-800/65 text-white p-3 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
                     >
@@ -243,7 +255,7 @@ const Home = () => {
                         className="bg-gray-800/65 text-white p-3 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
                     >
                         Next
-                    </button>
+                    </button>*/}
                 </div>
 
                 {/* Dots for Slide Indicator */}
@@ -297,9 +309,9 @@ const Home = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {services.map((service, index) => (
                                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                                    {service.icon}
+                                    <a href="/Services">{service.icon}
                                     <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                                    <p className="text-gray-700">{service.description}</p>
+                                    <p className="text-gray-700">{service.description}</p></a>
                                 </div>
                             ))}
                         </div>
@@ -307,7 +319,7 @@ const Home = () => {
                 </div>
             </section>
             <section>
-            <div className="py-24 bg-red-800 text-white">
+            <div className="py-24 bg-red-800/85 px-5 text-white">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl font-bold text-center mb-12">Key Features</h2>
 
@@ -316,7 +328,7 @@ const Home = () => {
             <div key={index} className="flex flex-col items-center text-center">
               <img src={feature.image} alt={feature.title} className="mb-6 rounded-lg shadow-lg w-full h-64 object-cover" />
               <h3 className="text-2xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-200">{feature.description}</p>
             </div>
           ))}
         </div>

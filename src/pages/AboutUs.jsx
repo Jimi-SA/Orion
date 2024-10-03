@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const teamMembers = [
-  { name: 'John Doe', role: 'CEO & Founder', image: 'https://placekitten.com/300/300', bio: 'With 15+ years of industry experience, John leads the team with passion and vision.' },
-  { name: 'Jane Smith', role: 'Chief Marketing Officer', image: 'https://placekitten.com/300/301', bio: 'Jane’s innovative marketing strategies have driven 200% growth in customer engagement.' },
-  { name: 'Sarah Lee', role: 'Lead Developer', image: 'https://placekitten.com/300/302', bio: 'Sarah leads the technical team and has developed state-of-the-art software solutions.' },
-  { name: 'David Brown', role: 'UI/UX Designer', image: 'https://placekitten.com/300/303', bio: 'David crafts intuitive and elegant designs, ensuring smooth user experiences.' },
+  { name: 'John Doe', role: 'CEO & Founder', image: '/Founder1.jpg', bio: 'With 15+ years of industry experience, John leads the team with passion and vision.' },
+  { name: 'Jane Smith', role: 'Chief Marketing Officer', image: '/Founder2.jpg', bio: 'Jane’s innovative marketing strategies have driven 200% growth in customer engagement.' },
+  { name: 'Sarah Lee', role: 'Lead Developer', image: '/Founder3.jpg', bio: 'Sarah leads the technical team and has developed state-of-the-art software solutions.' },
+  { name: 'David Brown', role: 'UI/UX Designer', image: '/Founder4.jpg', bio: 'David crafts intuitive and elegant designs, ensuring smooth user experiences.' },
 ];
 
 const testimonials = [
@@ -66,7 +66,7 @@ const AboutUs = () => {
         <div className="space-y-12">
           <motion.div className="flex flex-col md:flex-row items-center" variants={fadeIn}>
             <div className="md:w-1/3">
-              <img src="https://placekitten.com/600/400" alt="Company Origins" className="rounded-lg shadow-lg" />
+              <img src="/Team2.png" alt="Company Origins" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-2/3 md:ml-8 mt-6 md:mt-0">
               <h3 className="text-2xl font-semibold">Founded in 2010</h3>
@@ -78,7 +78,7 @@ const AboutUs = () => {
 
           <motion.div className="flex flex-col md:flex-row items-center" variants={fadeIn}>
             <div className="md:w-1/3">
-              <img src="https://placekitten.com/602/402" alt="First Major Project" className="rounded-lg shadow-lg" />
+              <img src="/Project.jpg" alt="First Major Project" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-2/3 md:ml-8 mt-6 md:mt-0">
               <h3 className="text-2xl font-semibold">First Major Project - 2015</h3>
