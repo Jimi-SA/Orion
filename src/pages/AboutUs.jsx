@@ -219,7 +219,7 @@ const AboutUs = () => {
       {/* Call to Action */}
       <div className="py-20 bg-red-900 text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Collaborate?</h2>
-        <p className="mb-8">Get in touch with us today and let’s turn your vision into reality.</p>
+        <p className="mb-8 md:px-0 px-4">Get in touch with us today and let’s turn your vision into reality.</p>
         <a href="/contact" className="bg-gray-500 hover:bg-gray-600 text-white py-3 px-6 rounded-lg">
           Contact Us
         </a>
