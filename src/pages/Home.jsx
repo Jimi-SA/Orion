@@ -24,7 +24,7 @@ const features = [
 const testimonials = [
     {
         name: "Jose Alejandro",
-        role: "CEO, Example Corp",
+        role: "CEO, IEC Electronics Corp",
         feedback: "Orion QA exceeded our highest expectations. From the initial consultation to project delivery, the team’s professionalism and dedication were evident. Their ability to truly understand our needs and deliver a tailored solution set them apart from the competition. We couldn’t have asked for a better partner.",
         image: "/client3.jpg", // You can replace it with a real image or avatar from a URL.
     },
@@ -139,7 +139,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="relative md:h-[82vh] h-[90vh] overflow-hidden flex">
+            <div className="relative md:h-[82vh] h-[77vh] overflow-hidden flex">
                 {/* Full Width Carousel Images */}
                 <motion.div
                     className="w-full h-full absolute"
@@ -157,13 +157,13 @@ const Home = () => {
                 </motion.div>
 
                 {/* Slanted Background */}
-                <div className="absolute inset-0 bg-gray-600 border-x-4 transform skew-x-[-20deg] translate-x-[50%] h-full"></div>
+                <div className="absolute inset-0 md:block hidden bg-gray-600 border-x-4 transform skew-x-[-20deg] translate-x-[50%] h-full"></div>
 
                 {/* Overlay for Text Readability */}
                 <div className="absolute inset-0 bg-black opacity-50"></div>
 
                 {/* Text Content */}
-                <div className="relative z-10 flex flex-col items-start justify-center h-full ml-2 p-8 text-white w-2/3">
+                <div className="relative z-10 flex flex-col items-start justify-center h-full ml-2 md:p-8 p-4 -mt-10 md:mt-0 text-white w-full md:w-2/3">
                     <motion.h1
                         className="text-5xl font-bold"
                         initial={{ opacity: 0, y: -50 }}
@@ -214,7 +214,7 @@ const Home = () => {
                 </div>
 
                 {/* Stylish Breakdown List on the Right */}
-                <div className="relative z-10 flex md:flex-col text-xl bg-white/5 pl-5 justify-start md:w-[50%] items-end h-full py-12">
+                <div className="relative z-10 md:flex hidden md:flex-col text-xl bg-white/5 pl-5 justify-start md:w-[50%] items-end h-full py-12">
                     <div className="flex flex-col w-full items-start space-y-8">
                         {['Vision', 'Design', 'Community', 'Our Goal'].map((item, index) => (
                             <div
@@ -259,7 +259,7 @@ const Home = () => {
                 </div>
 
                 {/* Dots for Slide Indicator */}
-                <div className="absolute bottom-20 left-[35%] transform -translate-x-1/2 flex space-x-2 z-10">
+                <div className="absolute bottom-20 md:left-[35%] left-[20%] transform -translate-x-1/2 flex space-x-2 z-10">
                     {slides.map((_, index) => (
                         <div
                             key={index}
@@ -269,9 +269,9 @@ const Home = () => {
                     ))}
                 </div>
             </div>
-            <div className="py-28 px-12 bg-white text-start">
+            <div className="md:py-28 py-16 md:px-12 px-4 bg-white text-start">
                 <div className="container mx-auto">
-                    <h2 className="text-5xl font-bold mb-6">About Us</h2>
+                    <h2 className="md:text-5xl text-3xl font-bold mb-6">About Us</h2>
                     <p className="text-lg text-gray-700  mx-auto mb-12">
                         Orion is a forward-thinking company dedicated to driving innovation and excellence. Our mission is to empower businesses and individuals through cutting-edge solutions, groundbreaking technology, and exceptional service.
                         We believe that by working together, we can achieve extraordinary results.
