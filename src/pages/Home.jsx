@@ -25,25 +25,25 @@ const testimonials = [
     {
         name: "Jose Alejandro",
         role: "CEO, Example Corp",
-        feedback: "Working with this team has been an absolute pleasure. They delivered above and beyond my expectations.",
+        feedback: "Orion QA exceeded our highest expectations. From the initial consultation to project delivery, the team’s professionalism and dedication were evident. Their ability to truly understand our needs and deliver a tailored solution set them apart from the competition. We couldn’t have asked for a better partner.",
         image: "/client3.jpg", // You can replace it with a real image or avatar from a URL.
     },
     {
         name: "Mary Shallet",
         role: "CTO, Tech Innovators",
-        feedback: "The level of professionalism and expertise provided is top-notch. Our project was completed ahead of schedule!",
+        feedback: "The level of service we received was exceptional. Orion QA didn’t just complete the project—they became an integral part of our team. Their commitment to our success was unmatched, and they went the extra mile at every turn to ensure we achieved our goals. Truly outstanding.",
         image: "/client1.png",
     },
     {
         name: "Adrián Meza",
         role: "Marketing Head, Creative Solutions",
-        feedback: "Their creative approach to problem-solving has helped our company achieve outstanding results.",
+        feedback: "Orion QA’s innovative approach transformed our business. Their keen attention to detail and forward-thinking strategies allowed us to scale at a pace we never thought possible. If you’re looking for a partner who delivers real impact, Orion QA is the answer.",
         image: "/client2.jpg",
     },
     {
         name: "Mily Gavidia Villacres",
         role: "Marketing Head, Creative Solutions",
-        feedback: "Their creative approach to problem-solving has helped our company achieve outstanding results.",
+        feedback: "Working with Orion QA was a game changer for us. Their technical expertise and proactive approach to solving challenges made a significant impact on our project’s success. They consistently delivered high-quality work, ahead of schedule, and with unmatched precision.",
         image: "/client4.jpg",
     },
 ];

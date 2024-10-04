@@ -59,9 +59,16 @@ const Services = () => {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <div className="bg-gray-900 text-white py-16 text-center">
+      <div
+        className="relative bg-gray-900 text-white py-28 text-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/Goal.jpg')" }}
+      >
+        {/* Gray overlay */}
+        <div className="absolute inset-0 bg-gray-900 opacity-75"></div>
+
+        {/* Content */}
         <motion.h1
-          className="text-4xl font-bold"
+          className="relative text-4xl font-bold"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -69,15 +76,15 @@ const Services = () => {
           Our Services
         </motion.h1>
         <motion.p
-          className="text-lg mt-4 max-w-2xl mx-auto"
+          className="relative text-lg mt-4 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Explore a range of professional services designed to meet your business needs. We ensure every solution we 
-          provide is tailored to help you achieve your goals.
+          Explore a range of professional services designed to meet your business needs. We ensure every solution we provide is tailored to help you achieve your goals.
         </motion.p>
       </div>
+
 
       {/* Services List */}
       <div className="py-16 container mx-auto px-6 md:px-12 lg:px-20">
