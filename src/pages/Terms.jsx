@@ -22,12 +22,12 @@ const TermsAndConditions = () => {
 
         <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">4. Intellectual Property</h2>
         <p className="text-gray-600 mb-4">
-          All content, trademarks, and other intellectual property on the Site are the property of Orion or its licensors. You may not reproduce, distribute, or create derivative works without our express written permission.
+          All content, trademarks, and other intellectual property on the Site are the property of Orion Quality Assurance Inc. or its licensors. You may not reproduce, distribute, or create derivative works without our express written permission.
         </p>
 
         <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">5. Limitation of Liability</h2>
         <p className="text-gray-600 mb-4">
-          To the fullest extent permitted by law, Orion shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of the Site.
+          To the fullest extent permitted by law, Orion Quality Assurance Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of the Site.
         </p>
 
         <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">6. Governing Law</h2>

@@ -8,9 +8,9 @@ const teamMembers = [
 ];
 
 const testimonials = [
-  { name: 'Jose Alejandro', feedback: 'Orion QA exceeded our highest expectations. From the initial consultation to project delivery, the team’s professionalism and dedication were evident. Their ability to truly understand our needs and deliver a tailored solution set them apart from the competition. We couldn’t have asked for a better partner.' },
-  { name: 'Mary Shallet', feedback: 'The level of service we received was exceptional. Orion QA didn’t just complete the project—they became an integral part of our team. Their commitment to our success was unmatched, and they went the extra mile at every turn to ensure we achieved our goals. Truly outstanding.' },
-  { name: 'Adrián Meza', feedback: 'Orion QA’s innovative approach transformed our business. Their keen attention to detail and forward-thinking strategies allowed us to scale at a pace we never thought possible. If you’re looking for a partner who delivers real impact, Orion QA is the answer.' },
+  { name: 'Jose Alejandro', feedback: 'Orion Quality Assurance Inc. exceeded our highest expectations. From the initial consultation to project delivery, the team’s professionalism and dedication were evident. Their ability to truly understand our needs and deliver a tailored solution set them apart from the competition. We couldn’t have asked for a better partner.' },
+  { name: 'Mary Shallet', feedback: 'The level of service we received was exceptional. Orion Quality Assurance Inc. didn’t just complete the project—they became an integral part of our team. Their commitment to our success was unmatched, and they went the extra mile at every turn to ensure we achieved our goals. Truly outstanding.' },
+  { name: 'Adrián Meza', feedback: 'Orion Quality Assurance Inc. innovative approach transformed our business. Their keen attention to detail and forward-thinking strategies allowed us to scale at a pace we never thought possible. If you’re looking for a partner who delivers real impact, Orion Quality Assurance Inc. is the answer.' },
 ];
 
 const fadeIn = {

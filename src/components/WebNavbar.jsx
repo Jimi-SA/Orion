@@ -153,10 +153,10 @@ const Navbar = () => {
 
           {/* Company Info Section */}
           <div className="mb-24 border-t py-4 ml-2 border-gray-600 text-white text-lg">
-            <p className="mb-2">Orion Inc.</p>
+            <p className="mb-2">Orion QA.</p>
             <p className="mb-2">Empowering Innovation and Excellence.</p>
             <p className="mb-1">Contact us: support@orion.com</p>
-            <p>&copy; 2024 Orion Inc. All rights reserved.</p>
+            <p>&copy; 2024 Orion QA. All rights reserved.</p>
           </div>
         </motion.div>
       )}
