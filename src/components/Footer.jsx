@@ -70,7 +70,7 @@ const Footer = () => {
         
         {/* Copyright Section */}
         <div className="mt-10 border-t border-gray-600 pt-6 text-center">
-          <p className="text-sm">© {new Date().getFullYear()} Your Company. All rights reserved.</p>
+          <p className="text-sm">© {new Date().getFullYear()} Orion QA. All rights reserved.</p>
         </div>
       </div>
     </footer>

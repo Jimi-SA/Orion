@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi'; // Icons for mobile menu toggle
@@ -19,6 +19,22 @@ const Navbar = () => {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0 },
   };
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      // Add class to body to disable scroll
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Remove the class to enable scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   // Conditionally render the navbar only on non-dashboard routes
   if (isDashboardRoute) {
@@ -84,7 +100,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden fixed right-0 w-full h-full bg-gray-800 py-4 px-6 flex flex-col justify-between"
+          className="md:hidden fixed top-16 left-0 w-full h-full bg-gray-800 py-4 px-6 flex flex-col justify-between z-40" // Added z-40 to ensure it overlays properly
           initial={{ opacity: 0, x: '100%' }} // Slide from the right
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: '100%' }} // Slide out to the right
