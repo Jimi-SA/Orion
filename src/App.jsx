@@ -10,7 +10,7 @@ import SignUp from './pages/Signup';
 import Login from './pages/Login';
 import TermsAndConditions from './pages/Terms';
 import PasswordReset from './pages/PasswordReset';
-import { Sidebar, BottomNavBar } from './components/app/Navbar';
+import { Sidebar, BottomNavBar, FloatingProfile } from './components/app/Navbar';
 import { DarkModeToggle } from './components/app/DarkModeToggle';
 import Dashboard from './pages/app/Dashboard';
 import Profile from './pages/app/Profile';
@@ -23,15 +23,17 @@ import { motion } from 'framer-motion';
 const dashboardRoutes = ['/dashboard', '/profile', '/tasks', '/wallets', '/notifications'];
 
 const DashboardLayout = ({ children }) => (
-  <div className="min-h-screen flex flex-col lg:flex-row bg-white dark:bg-gray-900">
+  <div className="min-h-screen flex flex-col lg:flex-row bg-gray-100 dark:bg-gray-900">
     {/* Sidebar for Desktop */}
     <div className="hidden lg:block lg:w-[20%]">
       <Sidebar />
     </div>
 
+    <FloatingProfile/>
+
     {/* Main Content */}
     <motion.div
-      className="flex-1 p-6 lg:p-10"
+      className="flex-1 md:p-6 p-2 pt-6 lg:p-10"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
