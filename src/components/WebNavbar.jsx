@@ -8,7 +8,7 @@ const Navbar = () => {
   const location = useLocation();
 
   // Define the dashboard routes where the navbar should be hidden
-  const dashboardRoutes = ['/dashboard', '/profile', '/tasks', '/wallets', '/transactions', '/settings'];
+  const dashboardRoutes = ['/dashboard', '/profile', '/tasks', '/wallets', '/transactions', '/settings', '/notifications'];
 
   // Check if the current route is a dashboard route
   const isDashboardRoute = dashboardRoutes.includes(location.pathname);

@@ -6,7 +6,7 @@ import { FaHome, FaUser, FaTasks, FaWallet, FaBell, FaCogs, FaExchangeAlt } from
 
 export const Sidebar = () => {
   return (
-    <aside className="hidden lg:flex w-64 dark:bg-white dark:text-gray-800 bg-gray-800 text-white flex-col p-6 fixed h-full">
+    <aside className="hidden lg:flex w-64 dark:bg-white dark:text-gray-800 bg-gray-800 shadow-xl text-white flex-col p-6 fixed h-full">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -16,7 +16,7 @@ export const Sidebar = () => {
         <h1 className="text-3xl text-center dark:text-white py-4 font-bold mb-4">Orion</h1>
         </div>
         <nav className="space-y-4 pb-2">
-          <NavItem to="/" label="Dashboard" icon={<FaHome />} />
+          <NavItem to="/dashboard" label="Dashboard" icon={<FaHome />} />
           <NavItem to="/profile" label="Profile" icon={<FaUser />} />
           <NavItem to="/tasks" label="Tasks" icon={<FaTasks />} />
           <NavItem to="/wallets" label="Wallet"  icon={<FaWallet />} />
@@ -38,13 +38,12 @@ const NavItem = ({ to, icon, label }) => (
   <NavLink
     to={to}
     className={({ isActive }) =>
-      `flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 ${
-        isActive ? 'bg-gray-700 text-yellow-500' : 'hover:bg-gray-700 dark:hover:text-white'
-      }`
+      `flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 
+      ${isActive ? 'bg-gray-700 text-red-600 shadow-md' : 'hover:bg-gray-700 dark:hover:text-white hover:text-red-400'}`
     }
   >
-    {icon}
-    <span>{label}</span>
+    <span className="text-2xl">{icon}</span>
+    <span className="hidden lg:block">{label}</span>
   </NavLink>
 );
 
@@ -52,8 +51,8 @@ const NavItem = ({ to, icon, label }) => (
 // src/components/NavBar.jsx
 
 export const BottomNavBar = () => (
-  <nav className="lg:hidden fixed bottom-0 w-full bg-gray-900 text-white flex justify-around py-4 shadow-lg">
-    <NavItem to="/" icon={<FaHome />} />
+  <nav className="lg:hidden fixed bottom-0 w-full shadow-2xl bg-gray-900 text-white flex justify-around py-4 ">
+    <NavItem to="/dashboard" icon={<FaHome />} />
     <NavItem to="/tasks" icon={<FaTasks />} />
     <NavItem to="/wallets" icon={<FaWallet />} />
     <NavItem to="/profile" icon={<FaUser />} />

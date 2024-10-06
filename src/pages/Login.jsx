@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Importing eye icons
 
 const Login = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <motion.div
@@ -23,15 +30,22 @@ const Login = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 relative">
             <label className="block text-gray-700" htmlFor="password">Password</label>
             <input
               className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-              type="password"
+              type={passwordVisible ? 'text' : 'password'}
               id="password"
               placeholder="••••••••"
               required
             />
+            <button
+              type="button"
+              className="absolute right-2 top-[69%] transform -translate-y-1/2 text-gray-600 focus:outline-none"
+              onClick={togglePasswordVisibility}
+            >
+              {passwordVisible ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+            </button>
           </div>
           <motion.button
             className="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition duration-300"
@@ -41,6 +55,12 @@ const Login = () => {
             Login
           </motion.button>
         </form>
+        {/* Forgot Password */}
+        <div className="text-center mt-4">
+              <a href="/forgot-password" className="text-red-600 underline hover:text-red-800">
+                Forgot password?
+              </a>
+            </div>
         <p className="text-center text-gray-600 mt-4">
           Don't have an account? <a href="/sign-up" className="text-red-600 hover:underline">Sign Up</a>
         </p>

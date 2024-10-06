@@ -1,7 +1,29 @@
-import React from 'react';
+import React from 'react'; 
 import { FaLinkedin, FaTwitter, FaInstagram, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+
+  // Define the dashboard routes where the footer should be hidden
+  const dashboardRoutes = [
+    '/dashboard', 
+    '/profile', 
+    '/tasks', 
+    '/wallets', 
+    '/transactions', 
+    '/settings', 
+    '/notifications'
+  ];
+
+  // Check if the current route is a dashboard route
+  const isDashboardRoute = dashboardRoutes.includes(location.pathname);
+
+  // Conditionally render the footer only on non-dashboard routes
+  if (isDashboardRoute) {
+    return null;
+  }
+
   return (
     <footer className="bg-gray-800 text-white py-10">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">

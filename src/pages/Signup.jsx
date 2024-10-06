@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaExclamationCircle, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const SignUpPage = () => {
+
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   const [form, setForm] = useState({
     firstName: '',
     lastName: '',
@@ -115,16 +122,23 @@ const SignUpPage = () => {
             </div>
 
             {/* Password */}
-            <div>
-              <label className="block text-lg font-medium text-gray-700">Password</label>
-              <input
-                type="password"
-                value={form.password}
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
-                className={`w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300'}`}
-              />
-              {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
-            </div>
+            <div className="mb-4 relative">
+            <label className="block text-gray-700" htmlFor="password">Password</label>
+            <input
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+              type={passwordVisible ? 'text' : 'password'}
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+            <button
+              type="button"
+              className="absolute right-2 top-[69%] transform -translate-y-1/2 text-gray-600 focus:outline-none"
+              onClick={togglePasswordVisibility}
+            >
+              {passwordVisible ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+            </button>
+          </div>
 
             {/* Accept Terms */}
             <div className="flex items-center space-x-3">
@@ -153,6 +167,12 @@ const SignUpPage = () => {
               />
               <span className="text-gray-700">Sign up for our newsletter</span>
             </div>
+            <div className=" flex space-x-2 mt-4">
+            <p>Already have an account</p>
+              <a href="/login" className="text-red-600 underline hover:text-red-800">
+                Login
+              </a>
+            </div>
 
             {/* Submit Button */}
             <motion.button
@@ -163,13 +183,6 @@ const SignUpPage = () => {
             >
               Sign Up
             </motion.button>
-
-            {/* Forgot Password */}
-            <div className="text-center mt-4">
-              <a href="/forgot-password" className="text-red-600 underline hover:text-red-800">
-                Forgot password?
-              </a>
-            </div>
           </form>
         </motion.div>
       </div>
